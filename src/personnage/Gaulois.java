@@ -3,6 +3,7 @@ package personnage;
 public class Gaulois {
 	private String nom;
 	private int force;
+	private int effetPotion = 1;
 	
 	public static void main(String[] args) {
 		Gaulois asterix = new Gaulois("Asterix", 8);
@@ -33,8 +34,14 @@ public class Gaulois {
 	
 	public void frapper(Romain romain) {
 		System.out.println(this.nom + "envoie un grand coup dans la machoir de " + romain.getNom());
-		romain.RecevoirCoup(force/3);
+		romain.RecevoirCoup((force * effetPotion)/3);
+		if(effetPotion>1) {
+			effetPotion--;
+		}
 	}
 	
+	public void boirePotion(int forcePotion) {
+		this.effetPotion = forcePotion;
+	}
 	
 }
