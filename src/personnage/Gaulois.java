@@ -39,21 +39,19 @@ public class Gaulois {
 	public void boirePotion(int forcePotion) {
 		this.effetPotion = forcePotion;
 	}
-	
+
 	public void SetVillage(Village village) {
 		this.village = village;
 	}
-	
+
 	public void sePresenter() {
-		if(village != null) {
-			if(village.getChef().getNom() == nom) {
+		if (village != null) {
+			if (village.getChef().getNom() == nom) {
 				parler("Bonjour, je m'appelle " + nom + ". Je suis le chef du village " + village.getNom());
-			}
-			else {
+			} else {
 				parler("Bonjour, je m'appelle " + nom + ". J'habite le village " + village.getNom());
 			}
-		}
-		else {
+		} else {
 			parler("Bonjour, je m'appelle " + nom + ". Je voyage de villages en villages.");
 		}
 	}
