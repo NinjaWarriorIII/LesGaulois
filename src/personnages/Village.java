@@ -1,4 +1,4 @@
-package personnage;
+package personnages;
 
 public class Village {
 	private String nom;
@@ -25,7 +25,7 @@ public class Village {
 		if (nbVillageois < villageois.length) {
 			villageois[nbVillageois] = gaulois;
 			nbVillageois++;
-			gaulois.SetVillage(this);
+			gaulois.setVillage(this);
 		}
 	}
 
@@ -39,7 +39,7 @@ public class Village {
 
 	public void afficherVillageois() {
 		System.out.println(
-				"Dans le village \"Village des Irréductibles\" du chef" + chef + "vivent les légendaires gaulois :");
+				"Dans le village \"Village des Irrï¿½ductibles\" du chef" + chef + "vivent les lï¿½gendaires gaulois :");
 		for (int i = 0; i < nbVillageois; ++i) {
 			System.out.println("- " + villageois[i]);
 		}
@@ -47,10 +47,10 @@ public class Village {
 
 	public static void main(String[] args) {
 		Gaulois abraracourix = new Gaulois("Abraracourix", 6);
-		Gaulois asterix = new Gaulois("Astérix", 8);
-		Gaulois obelix = new Gaulois("Obélix", 25);
-		Gaulois doublePolemix = new Gaulois("DoublePolémix", 4);
-		Village village = new Village("Village des Irréductibles", abraracourix, 30);
+		Gaulois asterix = new Gaulois("Astï¿½rix", 8);
+		Gaulois obelix = new Gaulois("Obï¿½lix", 25);
+		Gaulois doublePolemix = new Gaulois("DoublePolï¿½mix", 4);
+		Village village = new Village("Village des Irrï¿½ductibles", abraracourix, 30);
 		village.ajouterVillageois(asterix);
 		village.ajouterVillageois(obelix);
 		Gaulois gaulois = village.trouverVillageois(1);
